@@ -1,0 +1,8 @@
+---- pxMBFrameCBTransmitterEmpty Matches (7 in 3 files) ----
+mb.c line 85 : BOOL( *pxMBFrameCBTransmitterEmpty ) ( void );
+eMBInit in mb.c :             pxMBFrameCBTransmitterEmpty = xMBRTUTransmitFSM;
+eMBInit in mb.c :             pxMBFrameCBTransmitterEmpty = xMBASCIITransmitFSM;
+mbport.h (include) line 110 : extern          BOOL( *pxMBFrameCBTransmitterEmpty ) ( void );
+xMBPortSerialPutByte in portserial.c (port) :      * by the protocol stack if pxMBFrameCBTransmitterEmpty( ) has been
+portserial.c (port) line 85 :  * call pxMBFrameCBTransmitterEmpty( ) which tells the protocol stack that
+prvvUARTTxReadyISR in portserial.c (port) :     pxMBFrameCBTransmitterEmpty(  );
